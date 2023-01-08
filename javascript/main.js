@@ -45,7 +45,8 @@ Seleccionarplan ();
 
 /* OBJETO */
 class auto {
-    constructor (marca, modelo, anio, nombre){
+    constructor (id, marca, modelo, anio, nombre){
+        this.id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
@@ -54,13 +55,33 @@ class auto {
 
 }
 
-
 /* ARRAY */
 const autos = [];
-    autos.push (new auto ("Toyota", "Corolla", "2022", "Juan"));
-    autos.push (new auto ("Volkswagen", "Gol", "2019", "Maria"));
-    autos.push (new auto ("Ford", "Fiesta", "2021", "Marcos"));
+    autos.push (new auto (1,"Toyota", "Corolla", "2022", "Juan"));
+    autos.push (new auto (2,"Volkswagen", "Gol", "2019", "Maria"));
+    autos.push (new auto (3,"Ford", "Fiesta", "2021", "Marcos"));
 console.log (autos);
+
+
+/* STORAGE - JSON */
+const guardarEnLocalStorage = (clave, valor) => {
+    localStorage.setItem(clave, valor)
+};
+for (const auto of autos) {
+    guardarEnLocalStorage(auto.id, JSON.stringify(auto));
+}
+
+
+/* DOM y Evento */
+const boton = document.createElement("button");
+boton.id = 'boton';
+boton.innerHTML = 'Cotizar'; 
+boton.addEventListener('click', function () {
+    const h3 = document.createElement ("h3");
+    h3.innerHTML = "La cotización ha sido enviada"
+    document.body.appendChild (h3);
+}) 
+document.body.appendChild(boton);
 
 
 /* INDICAR DATOS DEL AUTO SEGÚN EL NOMBRE DEL PROPIETARIO - FIND */
