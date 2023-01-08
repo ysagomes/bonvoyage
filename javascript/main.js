@@ -72,17 +72,6 @@ for (const auto of autos) {
 }
 
 
-/* DOM y Evento */
-const boton = document.createElement("button");
-boton.id = 'boton';
-boton.innerHTML = 'Cotizar'; 
-boton.addEventListener('click', function () {
-    const h3 = document.createElement ("h3");
-    h3.innerHTML = "La cotización ha sido enviada"
-    document.body.appendChild (h3);
-}) 
-document.body.appendChild(boton);
-
 
 /* INDICAR DATOS DEL AUTO SEGÚN EL NOMBRE DEL PROPIETARIO - FIND */
 function buscarAuto (clientes, auto){
@@ -101,3 +90,15 @@ for (let i=0; i < 1; i++){
 /* FILTER */
 const resultado = autos.filter ((el) => el.anio.includes ("2022"));
 console.log (resultado)
+
+
+/* DOM y Evento */
+const boton = document.createElement("button");
+boton.id = 'boton';
+boton.innerHTML = 'Cotizar'; 
+boton.addEventListener('click', function () {
+    const h3 = document.createElement ("h3");
+    h3.innerHTML = "La cotización ha sido enviada"
+    document.body.appendChild (h3);
+}) 
+document.body.appendChild(boton);
