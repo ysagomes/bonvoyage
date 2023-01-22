@@ -1,0 +1,112 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+ul {
+    list-style: none;
+    padding: none;
+    margin: none;
+}
+span.resultado {
+    position: relative;
+    width: 100%;
+}
+.resultado-enter {
+    transition: .5s;
+}
+.resultado-enter.resultado-enter-active{
+    transform: translateY(0%);
+}
+.resultado-exit{
+    transform: translateY(0);
+    transition: .5s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.resultado-exit-active{
+    opacity: 0;
+    transform: translateY(-10%);
+}
+.container{
+    max-width: 600px;
+    margin: 20px auto;
+}
+header{
+    background-color: #26C6DA;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+header h1{
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+h2{
+    font-size: 3rem;
+}
+.formulario{
+    background-color: white;
+    padding: 3rem;
+}
+.boton:hover{
+    background-color: #26C6DA;
+        cursor: pointer;
+}
+.error{
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.mensaje{
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+#resumen{
+    color: white;
+    text-align: center;
+}
+.radio{
+    margin: 0 1rem;
+}
+select{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-color: #e1e1e1;
+}
+label{
+    flex: 0 0 100px;
+}
+.campo{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.divResultado{
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #26C6DA;
+    background-color: #26C6DA;
+    margin-top: 10px;
+    position: relative;
+}
+.textoCotizacion{
+    color: #00838F;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1rem;
+}
