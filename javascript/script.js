@@ -19,8 +19,7 @@ const cotizarSeguro =()=>{
     if (marca ===""||
         year ===""||
         plan ===""){
-        mostrarError("#msj.error.cotizador","FALTA SELECCIONAR OPCIONES");
-        return;
+        return mostrarError("#msj.error.cotizador","FALTA SELECCIONAR OPCIONES");
     }
 
     let cotizacion= {marca,year,plan};
@@ -81,8 +80,8 @@ const mayuscula=(palabra)=>{
     return palabra.charAt(0).toUpperCase ()+palabra.slice(1);
 }
 
-const mostrarError= (elemento, mensaje)=>{
-    divError=document.querySelector(elemento);
+const mostrarError=(elemento, mensaje)=>{
+    divError=document.getElementById("msj.error.cotizador");
     divError.innerHTML=`<p class="alert alert-danger error">${mensaje}</p>`;
     setTimeout (()=>{ divError.innerHTML="";}, 2000);
 }

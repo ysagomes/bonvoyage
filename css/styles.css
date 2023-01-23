@@ -3,6 +3,7 @@ html{
 }
 body{
     font-family: 'Raleway', sans-serif;
+    margin-top: 80px;
 }
 ul {
     list-style: none;
